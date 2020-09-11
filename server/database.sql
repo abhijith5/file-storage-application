@@ -11,5 +11,9 @@ CREATE TABLE userdetails(
 CREATE TABLE pdfdetails(
   id SERIAL PRIMARY KEY,
   userid VARCHAR(255),
-  padfpath VARCHAR(255)
+  padfpath VARCHAR(255),
+  pdfname VARCHAR(255),
+  isAdmin boolean
 );
+
+INSERT INTO userdetails (id,username,email,password,userRole) VALUES (1,"admin","admin@gmail.com","admin123","admin")

@@ -1,0 +1,48 @@
+Admin
+---------
+
+general link :-  http://localhost:5000
+
+->  To get list of pdf data of all users
+
+endPoint:- /admin/pdf/data
+params:- { role:true }
+
+-> To search data from given list of pdf data
+endPoint:- /admin/pdf/data/search
+params:- { role:true, searchFilename:"qwerty" }
+
+
+users
+---------
+
+-> File Upload
+
+endPoint :- /api/upload
+params:- {pdffile:file}
+
+-> Add pdf data
+
+endPoint :- /pdf/add
+params :- { userid:"uuid", pdfpath:"path", pdfname:"path" }
+
+-> Get uploaded files of user
+
+endPoint :- /pdf/data
+params:- { userid:"uuid",role:true }
+
+-> Search pdf data from db
+
+endPoint :- /pdf/data/search
+params :- params:- { userid:"uuid", searchFilename:"qwerty" }
+
+
+--> Register
+
+endPoint :- /register
+params :-{ username:"qwerty", password:"password", email:"email@gmail.com"}
+
+--> Login
+
+endPoint :- /login
+params :- {email:"email",password:"password"}
